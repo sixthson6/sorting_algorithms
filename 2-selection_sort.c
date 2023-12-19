@@ -22,7 +22,7 @@ void selection_sort(int *array, size_t size)
 				less = j;
 				swp = 1;
 			}
-		}	
+		}
 		if (swp == 1)
 		{
 			temp = array[less];
