@@ -5,6 +5,7 @@
  * @array: list to be sorted
  * @low: less value
  * @high: greater value
+ * @size: size of list
  *
  * Return: current element
  */
@@ -13,9 +14,6 @@ size_t partition(int *array, int low, int high, size_t size)
 {
 	int i, j, temp;
 
-	/*if (array == NULL || low >= high)
-		return (low);
-	*/
 	i = low - 1;
 
 	for (j = low; j <= high - 1; j++)
@@ -49,9 +47,10 @@ size_t partition(int *array, int low, int high, size_t size)
  * @array: array to be sorted
  * @low: lesser value
  * @high: greater value
+ * @size: size of list
  */
 
-void quick_sort_helper(int * array, int low, int high, size_t size)
+void quick_sort_helper(int *array, int low, int high, size_t size)
 {
 	size_t pivot_index;
 
@@ -69,7 +68,7 @@ void quick_sort_helper(int * array, int low, int high, size_t size)
  * @size: size of array
  */
 
-void quick_sort(int * array, size_t size)
+void quick_sort(int *array, size_t size)
 {
 	if (array == NULL || size <= 1)
 		return;
